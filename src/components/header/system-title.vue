@@ -1,5 +1,5 @@
 <template>
-  <div class="system-title">{{sysName}}</div>
+  <div class="system-title"><img src="../../assets/images/logo.png">{{sysName}}</div>
 </template>
 <script lang="ts">
 import { Component, Prop, Vue } from "vue-property-decorator";
