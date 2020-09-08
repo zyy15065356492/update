@@ -32,6 +32,7 @@
         </SectionContainer>
       </div>
     </div>
+    <dialog-container></dialog-container>
   </div>
 </template>
 
@@ -55,7 +56,7 @@ import ApplicationFields from "@/components/home-body/application-fields.vue";
 import PhotovoltaicInfo from "@/components/home-body/photovoltaic-info.vue";
 import ChargingPile from "@/components/home-body/charging-pile.vue";
 import OperatingDays from "@/components/home-body/operating-days.vue";
-
+import DialogContainer from "@/components/utils/dialog-container.vue"
 @Component({
   components: {
     AreaMap,
@@ -67,6 +68,7 @@ import OperatingDays from "@/components/home-body/operating-days.vue";
     PhotovoltaicInfo,
     ChargingPile,
     OperatingDays,
+    DialogContainer
   },
 })
 export default class Home extends Vue {

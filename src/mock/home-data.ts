@@ -122,6 +122,65 @@ export const applicationFields: Array<InfoItem> = [
         unit: "个"
     }
 ];
+export const applicationList = [{
+    name: "智慧配电室",
+    list: [{
+        name: "智能配电台区运行监控系统",
+        site: "山东·临沂",
+        value: "http://ly.dianliangliang.com/#/home-container/home-body"
+    }, {
+        name: "能源智慧互联台区管理系统",
+        site: "山东·齐河",
+        value: "http://qh.dianliangliang.com/#/home-container/home/home-body/MDgxNTJENjU1MzQ4MTBBMA/齐河绿城"
+    }, {
+
+    }]
+}, {
+    name: "小区能效",
+    list: [{
+        name: "智能配电台区运行监控系统",
+        site: "浙江·乐清",
+        value: "http://yq.dianliangliang.com/#/home-container/chint-home"
+    }]
+}, {
+    name: "综合体能效",
+    list: [{
+        name: "银座·好望角能源综合管理系统",
+        site: "山东·济南",
+        value: "http://yzhwj.dianliangliang.com/#/room-home/NjYwMjA0OTk5NkQzQzM4NA/%E9%93%B6%E5%BA%A7%E5%A5%BD%E6%9C%9B%E8%A7%92/room-index"
+    }]
+}, {
+    name: "智慧校园",
+    list: []
+}, {
+    name: "工业企业",
+    list: [{
+        name: "智慧代维中心",
+        site: "山东·夏津",
+        value: "http://xj.dianliangliang.com/#/home-container/home-body"
+    }]
+}, {
+    name: "农业智慧能效",
+    list: [{
+        name: "能源智慧互联台区管理系统",
+        site: "山东·武城",
+        value: "http://wc.dianliangliang.com/#/home-container/home-body"
+    }, {
+        name: "智能配电台区运行监控系统",
+        site: "山东·禹城",
+        value: "http://wc.dianliangliang.com/#/home-container/home-body"
+    }]
+
+}, {
+    name: "连锁商业",
+    list: []
+}, {
+    name: "家庭能效",
+    list: []
+}, {
+    name: "中央空调能效",
+    list: []
+}];
 export const photovoltaicInfo: Array<InfoItem> = [
     {
         icon: "icon-fadiandanyuan",
