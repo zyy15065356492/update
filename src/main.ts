@@ -2,6 +2,10 @@ import Vue from 'vue'
 import App from './App.vue'
 import router from './router'
 import store from './store'
+import echarts from 'echarts';
+import "@/assets/styles/index.less";
+import "@/assets/fonts/iconfont/iconfont.css"
+Vue.prototype.$echarts = echarts;
 
 Vue.config.productionTip = false
 

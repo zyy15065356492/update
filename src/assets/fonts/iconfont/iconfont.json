@@ -1,0 +1,191 @@
+{
+  "id": "2052703",
+  "name": "综合运行管理监控平台",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "683410",
+      "name": "累计收益",
+      "font_class": "leijishouyi",
+      "unicode": "e61f",
+      "unicode_decimal": 58911
+    },
+    {
+      "icon_id": "4165951",
+      "name": "钱",
+      "font_class": "qian",
+      "unicode": "e60a",
+      "unicode_decimal": 58890
+    },
+    {
+      "icon_id": "6943364",
+      "name": "光伏电站",
+      "font_class": "guangfudianzhan",
+      "unicode": "e63b",
+      "unicode_decimal": 58939
+    },
+    {
+      "icon_id": "6943644",
+      "name": "发电单元",
+      "font_class": "fadiandanyuan",
+      "unicode": "e645",
+      "unicode_decimal": 58949
+    },
+    {
+      "icon_id": "13956642",
+      "name": "发电单元",
+      "font_class": "fadianxiaolv",
+      "unicode": "e6ab",
+      "unicode_decimal": 59051
+    },
+    {
+      "icon_id": "15243393",
+      "name": "累计发电量",
+      "font_class": "leijifadianliang",
+      "unicode": "e630",
+      "unicode_decimal": 58928
+    },
+    {
+      "icon_id": "518142",
+      "name": "3 家庭地址",
+      "font_class": "3jiatingdizhi",
+      "unicode": "e887",
+      "unicode_decimal": 59527
+    },
+    {
+      "icon_id": "796952",
+      "name": "中央空调",
+      "font_class": "zhongyangkongdiao",
+      "unicode": "e704",
+      "unicode_decimal": 59140
+    },
+    {
+      "icon_id": "5158730",
+      "name": "S-农业",
+      "font_class": "S-nongye",
+      "unicode": "e61b",
+      "unicode_decimal": 58907
+    },
+    {
+      "icon_id": "6677867",
+      "name": "农业技术",
+      "font_class": "nongyejishu",
+      "unicode": "e60b",
+      "unicode_decimal": 58891
+    },
+    {
+      "icon_id": "7519143",
+      "name": "工业",
+      "font_class": "gongye",
+      "unicode": "e670",
+      "unicode_decimal": 58992
+    },
+    {
+      "icon_id": "8224851",
+      "name": "小区-线性",
+      "font_class": "xiaoqu-xianxing",
+      "unicode": "e60d",
+      "unicode_decimal": 58893
+    },
+    {
+      "icon_id": "8955118",
+      "name": "学校",
+      "font_class": "xuexiao",
+      "unicode": "e642",
+      "unicode_decimal": 58946
+    },
+    {
+      "icon_id": "14004123",
+      "name": "智慧园区",
+      "font_class": "zhihuiyuanqu",
+      "unicode": "e69d",
+      "unicode_decimal": 59037
+    },
+    {
+      "icon_id": "15186554",
+      "name": "连锁加盟",
+      "font_class": "liansuojiameng",
+      "unicode": "e632",
+      "unicode_decimal": 58930
+    },
+    {
+      "icon_id": "16416738",
+      "name": "学校",
+      "font_class": "xuexiao1",
+      "unicode": "e61e",
+      "unicode_decimal": 58910
+    },
+    {
+      "icon_id": "584065",
+      "name": "退出",
+      "font_class": "084tuichu",
+      "unicode": "e659",
+      "unicode_decimal": 58969
+    },
+    {
+      "icon_id": "2678576",
+      "name": "变压器",
+      "font_class": "bianyaqi",
+      "unicode": "e63c",
+      "unicode_decimal": 58940
+    },
+    {
+      "icon_id": "6246304",
+      "name": "用户",
+      "font_class": "yonghu",
+      "unicode": "e64e",
+      "unicode_decimal": 58958
+    },
+    {
+      "icon_id": "6943375",
+      "name": "装机容量",
+      "font_class": "zhuangjirongliang",
+      "unicode": "e63d",
+      "unicode_decimal": 58941
+    },
+    {
+      "icon_id": "7665982",
+      "name": "设备",
+      "font_class": "shebei",
+      "unicode": "e603",
+      "unicode_decimal": 58883
+    },
+    {
+      "icon_id": "7674872",
+      "name": "用户",
+      "font_class": "dingbudaohang-zhangh",
+      "unicode": "e713",
+      "unicode_decimal": 59155
+    },
+    {
+      "icon_id": "10056839",
+      "name": "预警",
+      "font_class": "yujing",
+      "unicode": "e619",
+      "unicode_decimal": 58905
+    },
+    {
+      "icon_id": "10268979",
+      "name": "人次",
+      "font_class": "renci",
+      "unicode": "e6a1",
+      "unicode_decimal": 59041
+    },
+    {
+      "icon_id": "13638741",
+      "name": "配电室",
+      "font_class": "peidianshi",
+      "unicode": "e65f",
+      "unicode_decimal": 58975
+    },
+    {
+      "icon_id": "16395354",
+      "name": "项目",
+      "font_class": "biaoqiankuozhan_xiangmu-292",
+      "unicode": "eb95",
+      "unicode_decimal": 60309
+    }
+  ]
+}
