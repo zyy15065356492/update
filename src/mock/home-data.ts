@@ -127,13 +127,15 @@ export const applicationList = [{
     list: [{
         name: "智能配电台区运行监控系统",
         site: "山东·临沂",
-        value: "http://ly.dianliangliang.com/#/home-container/home-body"
+        value: "http://ly.dianliangliang.com/#/home-container/OTVCREZENjRCMkYzRDMxMQ/home-body"
     }, {
         name: "能源智慧互联台区管理系统",
         site: "山东·齐河",
         value: "http://qh.dianliangliang.com/#/home-container/home/home-body/MDgxNTJENjU1MzQ4MTBBMA/齐河绿城"
     }, {
-
+        name: "国网青岛供电公司崂山供电中心",
+        site: "中国·青岛",
+        value: "http://ls.dianliangliang.com/#//home-container/home/home-body/MDgxNTJENjU1MzQ4MTBBMA/崂山供电"
     }]
 }, {
     name: "小区能效",
@@ -141,13 +143,17 @@ export const applicationList = [{
         name: "智能配电台区运行监控系统",
         site: "浙江·乐清",
         value: "http://yq.dianliangliang.com/#/home-container/chint-home"
+    }, {
+        name: "智能配电台区运行监控系统",
+        site: "浙江·陵城",
+        value: "http://lingcheng.dianliangliang.com/#/home-container/home/home-body/MjQwNUY1QkEwNTI3RENFNA/%E8%96%9B%E5%BA%84%E7%A4%BE%E5%8C%BA"
     }]
 }, {
     name: "综合体能效",
     list: [{
         name: "银座·好望角能源综合管理系统",
         site: "山东·济南",
-        value: "http://yzhwj.dianliangliang.com/#/room-home/NjYwMjA0OTk5NkQzQzM4NA/%E9%93%B6%E5%BA%A7%E5%A5%BD%E6%9C%9B%E8%A7%92/room-index"
+        value: "http://yzhwj.dianliangliang.com/#/home-container/OTVCREZENjRCMkYzRDMxMQ/room-home/NjYwMjA0OTk5NkQzQzM4NA/%E9%93%B6%E5%BA%A7%E5%A5%BD%E6%9C%9B%E8%A7%92/room-index"
     }]
 }, {
     name: "智慧校园",
@@ -157,18 +163,18 @@ export const applicationList = [{
     list: [{
         name: "智慧代维中心",
         site: "山东·夏津",
-        value: "http://xj.dianliangliang.com/#/home-container/home-body"
+        value: "http://xj.dianliangliang.com/#/home-container/OTVCREZENjRCMkYzRDMxMQ/home-body"
     }]
 }, {
     name: "农业智慧能效",
     list: [{
         name: "能源智慧互联台区管理系统",
         site: "山东·武城",
-        value: "http://wc.dianliangliang.com/#/home-container/home-body"
+        value: "http://wc.dianliangliang.com/#/home-container/OTVCREZENjRCMkYzRDMxMQ/home-body"
     }, {
         name: "智能配电台区运行监控系统",
         site: "山东·禹城",
-        value: "http://wc.dianliangliang.com/#/home-container/home-body"
+        value: "http://yc.dianliangliang.com/#/home-container/OTVCREZENjRCMkYzRDMxMQ/home-body"
     }]
 
 }, {
