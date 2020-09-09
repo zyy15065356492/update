@@ -6,6 +6,13 @@
   "description": "",
   "glyphs": [
     {
+      "icon_id": "2076310",
+      "name": " 详情",
+      "font_class": "xiangqing",
+      "unicode": "e8a0",
+      "unicode_decimal": 59552
+    },
+    {
       "icon_id": "683410",
       "name": "累计收益",
       "font_class": "leijishouyi",

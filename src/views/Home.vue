@@ -19,7 +19,7 @@
       </SectionContainer>
       <div class="section-col">
         <SectionContainer class :section-info="{title:'应用领域',position:'left'}">
-          <application-fields :field-list="applicationFields"></application-fields>
+          <application-fields @selected-field="selectFieldListener" :field-list="applicationFields"></application-fields>
         </SectionContainer>
         <SectionContainer
           class="section-item sec-bottom"
@@ -32,7 +32,9 @@
         </SectionContainer>
       </div>
     </div>
-    <dialog-container></dialog-container>
+    <dialog-container v-if="isShowDialog" :dialogTitle="selectAppList.name" @close-dialog="isShowDialog=false">
+      <application-list :app-list="selectAppList.list"></application-list>
+    </dialog-container>
   </div>
 </template>
 
@@ -49,6 +51,7 @@ import {
   photovoltaicInfo,
   chargingPiles,
   operatedDays,
+  applicationList,
 } from "@/mock/home-data";
 import InfoItem from "@/interfaces/info-item";
 import Charts from "@/components/utils/charts.vue";
@@ -56,7 +59,8 @@ import ApplicationFields from "@/components/home-body/application-fields.vue";
 import PhotovoltaicInfo from "@/components/home-body/photovoltaic-info.vue";
 import ChargingPile from "@/components/home-body/charging-pile.vue";
 import OperatingDays from "@/components/home-body/operating-days.vue";
-import DialogContainer from "@/components/utils/dialog-container.vue"
+import DialogContainer from "@/components/utils/dialog-container.vue";
+import ApplicationList from "@/components/home-body/dialogs/application-list.vue";
 @Component({
   components: {
     AreaMap,
@@ -68,12 +72,23 @@ import DialogContainer from "@/components/utils/dialog-container.vue"
     PhotovoltaicInfo,
     ChargingPile,
     OperatingDays,
-    DialogContainer
+    DialogContainer,
+    ApplicationList
   },
 })
 export default class Home extends Vue {
   public generalList: Array<InfoItem>;
   private applicationFields: Array<InfoItem>;
+  private selectAppList:
+    | {
+        name: string;
+        list: (
+          | { name: string; site: string; value: string }
+          | { name?: undefined; site?: undefined; value?: undefined }
+        )[];
+      }
+    | undefined;
+  private isShowDialog = false;
 
   constructor() {
     super();
@@ -152,7 +167,7 @@ export default class Home extends Vue {
             lineStyle: {
               // 使用深浅的间隔色
               color: "#21abfa",
-              width:0.5
+              width: 0.5,
             },
           },
           //  改变x轴字体颜色和大小
@@ -183,10 +198,26 @@ export default class Home extends Vue {
     }
     return newParam;
   }
+  //选择field
+  selectFieldListener(selectedField: InfoItem) {
+    console.log("home-selected-field",selectedField);
+    this.getShowAppList(selectedField);
+    this.showDialog();
+  }
+  getShowAppList(selectedField: InfoItem) {
+    const _app = applicationList.find((application) => {
+      return (application.name == selectedField.name);
+    });
+    this.selectAppList = _app;
+  }
+  showDialog() {
+    this.isShowDialog = true;
+  }
 }
 </script>
 <style lang="less" scoped>
 .home {
+  position: relative;
   width: 100%;
   height: 100%;
   background-image: url(../assets/images/home-bg.png);

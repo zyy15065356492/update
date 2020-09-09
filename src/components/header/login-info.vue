@@ -30,7 +30,7 @@ export default class LoginInfo extends Vue {
 <style lang="less" scoped>
 .login-info{
     display: flex;
-    justify-content: end;
+    justify-content: flex-end;
     align-self:center;
 }
 .icon-person-conatiner{

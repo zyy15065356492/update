@@ -1,6 +1,6 @@
 <template>
   <transition :id="dialogId" name="dia" mode="out-in">
-    <div class="dialog-bg position-absolute">
+    <div class="dialog-bg">
       <div
         v-bind:style="{left:dialogSize.x+'%',right:dialogSize.x+'%',top:dialogSize.y+'%',bottom:dialogSize.y+'%'}"
         class="dialog-container px-4 py-2 d-flex flex-column position-absolute"
@@ -15,12 +15,20 @@
   </transition>
 </template>
 <script lang="ts">
-import { Vue, Prop, Emit } from "vue-property-decorator";
-
+import { Vue, Prop, Emit, Component } from "vue-property-decorator";
+@Component
 export default class DialogContainer extends Vue {
-  @Prop() private readonly dialogId!: string;
-  @Prop() private readonly dialogTile!: string;
   @Prop({
+    default: "dialog-id",
+  })
+  readonly dialogId!: string;
+  @Prop({
+    required: false,
+    default: "标题",
+  })
+  readonly dialogTitle!: string;
+  @Prop({
+    required: false,
     default: () => {
       return {
         x: 10,
@@ -28,9 +36,12 @@ export default class DialogContainer extends Vue {
       };
     },
   })
-  private readonly dialogSize!: any;
+  readonly dialogSize!: {
+    x: number;
+    y: number;
+  };
 
-  @Emit("closeDialog")
+  @Emit("close-dialog")
   emitClose() {
     console.log();
   }
@@ -38,6 +49,7 @@ export default class DialogContainer extends Vue {
 </script>
 <style lang="less" scoped>
 .dialog-bg {
+  position: fixed;
   left: 0;
   right: 0;
   top: 0;
@@ -48,6 +60,7 @@ export default class DialogContainer extends Vue {
   min-height: 220px;
 }
 .dialog-container {
+  position: absolute;
   z-index: 999;
   box-shadow: 5px 5px 10px rgba(233, 233, 233, 0.2);
   border-radius: 1rem;
@@ -57,6 +70,7 @@ export default class DialogContainer extends Vue {
   background-repeat: no-repeat;
 }
 .dia-close-icon {
+  position: absolute;
   cursor: pointer;
   width: 2rem;
   height: 2rem;

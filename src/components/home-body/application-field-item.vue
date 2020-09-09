@@ -1,5 +1,8 @@
 <template>
-  <div class="application-field-item full-bg cursor-pointer">
+  <div
+    class="application-field-item full-bg cursor-pointer"
+    v-on:click.stop="fieldItemClickListener(appFieldItemInfo)"
+  >
     <div class="icon iconfont" :class="appFieldItemInfo.icon"></div>
     <div class="content">
       <div class="value-content">
@@ -11,11 +14,15 @@
   </div>
 </template>
 <script lang="ts">
-import { Vue, Component, Prop } from "vue-property-decorator";
+import { Vue, Component, Prop, Emit } from "vue-property-decorator";
 import InfoItem from "@/interfaces/info-item";
 @Component
 export default class ApplicationFieldItem extends Vue {
   @Prop() private appFieldItemInfo!: InfoItem;
+  @Emit("selected-field")
+  fieldItemClickListener(appFieldItemInfo: InfoItem) {
+    console.log("infoItem",appFieldItemInfo);
+  }
 }
 </script>
 <style lang="less" scoped>
@@ -28,7 +35,7 @@ export default class ApplicationFieldItem extends Vue {
   align-items: center;
   margin: 12px 0;
 }
-.icon{
+.icon {
   font-size: 30px;
 }
 .content {
