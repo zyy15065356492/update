@@ -26,13 +26,19 @@
           :section-info="{title:'系统运行',position:'left'}"
         >
           <div class="operating-status">
-            <photovoltaic-info :photovoltaic-info-list="photovoltaicInfo"></photovoltaic-info>
-            <charging-pile :charging-pile-list="chargingPileList"></charging-pile>
+            <swiper-container>
+              <photovoltaic-info class="swiper-slide" :photovoltaic-info-list="photovoltaicInfo"></photovoltaic-info>
+              <charging-pile class="swiper-slide" :charging-pile-list="chargingPileList"></charging-pile>
+            </swiper-container>
           </div>
         </SectionContainer>
       </div>
     </div>
-    <dialog-container v-if="isShowDialog" :dialogTitle="selectAppList.name" @close-dialog="isShowDialog=false">
+    <dialog-container
+      v-if="isShowDialog"
+      :dialogTitle="selectAppList.name"
+      @close-dialog="isShowDialog=false"
+    >
       <application-list :app-list="selectAppList.list"></application-list>
     </dialog-container>
   </div>
@@ -61,6 +67,7 @@ import ChargingPile from "@/components/home-body/charging-pile.vue";
 import OperatingDays from "@/components/home-body/operating-days.vue";
 import DialogContainer from "@/components/utils/dialog-container.vue";
 import ApplicationList from "@/components/home-body/dialogs/application-list.vue";
+import SwiperContainer from "@/components/utils/swiper-container.vue";
 @Component({
   components: {
     AreaMap,
@@ -73,7 +80,8 @@ import ApplicationList from "@/components/home-body/dialogs/application-list.vue
     ChargingPile,
     OperatingDays,
     DialogContainer,
-    ApplicationList
+    ApplicationList,
+    SwiperContainer,
   },
 })
 export default class Home extends Vue {
@@ -200,13 +208,13 @@ export default class Home extends Vue {
   }
   //选择field
   selectFieldListener(selectedField: InfoItem) {
-    console.log("home-selected-field",selectedField);
+    console.log("home-selected-field", selectedField);
     this.getShowAppList(selectedField);
     this.showDialog();
   }
   getShowAppList(selectedField: InfoItem) {
     const _app = applicationList.find((application) => {
-      return (application.name == selectedField.name);
+      return application.name == selectedField.name;
     });
     this.selectAppList = _app;
   }
@@ -254,7 +262,7 @@ export default class Home extends Vue {
 }
 .general-info {
   flex-grow: 1;
-  padding: 10px 12%;
+  padding: 10px 12px;
 }
 .operating-status {
   flex-grow: 1;

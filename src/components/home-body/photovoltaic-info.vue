@@ -32,6 +32,9 @@ export default class PhotovoltaicInfo extends Vue {
     type: Array,
   })
   private photovoltaicInfoList!: Array<InfoItem>;
+  mounted(){
+    console.log("photovoltaic mouted")
+  }
 }
 </script>
 <style lang="less" scoped>

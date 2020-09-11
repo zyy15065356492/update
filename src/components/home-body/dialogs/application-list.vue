@@ -41,6 +41,6 @@ export default class ApplicationList extends Vue {
 </script>
 <style lang="less" scoped>
 .application-list{
-    padding: 12px;
+    padding: 4px 8px;
 }
 </style>

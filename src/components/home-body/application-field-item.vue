@@ -33,7 +33,7 @@ export default class ApplicationFieldItem extends Vue {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 12px 0;
+  margin: 4px 0;
 }
 .icon {
   font-size: 30px;

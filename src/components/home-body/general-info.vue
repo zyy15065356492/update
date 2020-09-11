@@ -43,14 +43,13 @@ export default class GeneralInfo extends Vue {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  margin: 0 8px;
 }
 .info-item {
   background-color: #0e6de9;
   position: relative;
-  width: calc(50% - 16px);
+  width: calc(50% - 8px);
   height: auto;
-  padding: 4px 8px;
+  padding: 4px 4px;
   text-align: left;
   display: flex;
   justify-content: space-between;

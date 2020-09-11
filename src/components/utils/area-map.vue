@@ -72,31 +72,31 @@ export default class AreaMap extends Vue {
         },
       ],
       series: [
-        {
-          name: "涟漪散点",
-          type: "effectScatter",
-          coordinateSystem: "geo",
-          symbolSize: 10,
-          data: this.convertData(chinaFull),
-          rippleEffect: {
-            color: "#2196f3",
-          },
-          markPoint: {
-            size: 20,
-          },
-          label: {
-            normal: {
-              show: true,
-              formatter: "{b}",
-              position: "right",
-            },
-          },
-          itemStyle: {
-            color: "#2196f3",
-            shadowBlur: 10,
-            shadowColor: "#333",
-          },
-        },
+        // {
+        //   name: "涟漪散点",
+        //   type: "effectScatter",
+        //   coordinateSystem: "geo",
+        //   symbolSize: 10,
+        //   data: this.convertData(chinaFull),
+        //   rippleEffect: {
+        //     color: "#2196f3",
+        //   },
+        //   markPoint: {
+        //     size: 20,
+        //   },
+        //   label: {
+        //     normal: {
+        //       show: true,
+        //       formatter: "{b}",
+        //       position: "right",
+        //     },
+        //   },
+        //   itemStyle: {
+        //     color: "#2196f3",
+        //     shadowBlur: 10,
+        //     shadowColor: "#333",
+        //   },
+        // },
       ],
     };
   }

@@ -33,6 +33,5 @@ export default class ApplicationFields extends Vue {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
-  padding: 12px;
 }
 </style>

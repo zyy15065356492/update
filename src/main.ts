@@ -5,6 +5,7 @@ import store from './store'
 import echarts from 'echarts';
 import "@/assets/styles/index.less";
 import "@/assets/fonts/iconfont/iconfont.css"
+import 'swiper/swiper.less';
 Vue.prototype.$echarts = echarts;
 
 Vue.config.productionTip = false

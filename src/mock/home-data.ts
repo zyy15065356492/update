@@ -1,58 +1,58 @@
 import InfoItem from "@/interfaces/info-item"
 export const generalList: Array<InfoItem> = [{
     icon: "icon-biaoqiankuozhan_xiangmu-292",
-    name: "项目数量",
+    name: "项目",
     value: 158,
     unit: "个"
 }, {
     icon: "icon-shebei",
-    name: "监测设备数量",
-    value: 23,
+    name: "监测设备",
+    value: 12523,
     unit: "个"
 }, {
     icon: "icon-zhuangjirongliang",
     name: "总容量",
-    value: 1580,
+    value: '1560k',
     unit: "kVA"
 }, {
     icon: "icon-peidianshi",
-    name: "配电室数量",
-    value: 15847,
+    name: "配电室",
+    value: 847,
     unit: '个'
 }, {
     icon: "icon-bianyaqi",
-    name: "台区数量",
-    value: 45,
+    name: "台区",
+    value: 945,
     unit: "个"
 }, {
     icon: "icon-yonghu",
-    name: "服务用户数",
+    name: "服务用户",
     value: 15451,
     unit: "户"
 }, {
     icon: "icon-renci",
-    name: "派单次数",
+    name: "派单",
     value: 158,
     unit: "人次"
 }, {
     icon: "icon-yujing",
-    name: "预警数量",
+    name: "预警",
     value: 160,
     unit: "条"
 }]
 export const healthEvaluationList: Array<InfoItem> = [
     {
         name: "配电室",
-        value: 12
+        value: 82
     }, {
         name: "小区",
-        value: 45
+        value: 76
     }, {
         name: "综合体",
-        value: 25
+        value: 92
     }, {
         name: "校园",
-        value: 39
+        value: 89
     }, {
         name: "工业",
         value: 99,
@@ -144,8 +144,8 @@ export const applicationList = [{
         site: "浙江·乐清",
         value: "http://yq.dianliangliang.com/#/home-container/chint-home"
     }, {
-        name: "智能配电台区运行监控系统",
-        site: "浙江·陵城",
+        name: "国网陵城区供电公司智能台区监控系统",
+        site: "山东·陵城",
         value: "http://lingcheng.dianliangliang.com/#/home-container/home/home-body/MjQwNUY1QkEwNTI3RENFNA/%E8%96%9B%E5%BA%84%E7%A4%BE%E5%8C%BA"
     }]
 }, {

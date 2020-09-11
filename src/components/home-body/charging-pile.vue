@@ -28,6 +28,9 @@ import InfoItem from "@/interfaces/info-item";
 })
 export default class ChargingPile extends Vue {
   @Prop() private chargingPileList!: Array<InfoItem>;
+  mounted(){
+    console.log("ChargingPile mounted");
+  }
 }
 </script>
 <style lang="less" scoped>
