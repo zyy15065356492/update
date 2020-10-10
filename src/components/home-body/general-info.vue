@@ -1,16 +1,22 @@
 <template>
   <div class="general-info">
     <div
-      class="info-item half-width"
-      v-for="(infoItem,index) in infoItemList"
-      :key="'item-info-'+index"
+      class="info-item half-width "
+      v-for="(infoItem, index) in infoItemList"
+      :key="'item-info-' + index"
     >
-      <div>
-        <span v-if="infoItem.icon" class="icon iconfont" :class="infoItem.icon"></span>
-        <span class="title">{{infoItem.name}}({{infoItem.unit}})</span>
-      </div>
-      <div>
-        <span class="value">{{infoItem.value}}</span>
+      <div class="item-container d-flex justify-content-between flex-grow-1">
+        <div>
+          <span
+            v-if="infoItem.icon"
+            class="icon iconfont"
+            :class="infoItem.icon"
+          ></span>
+          <span class="title">{{ infoItem.name }}({{ infoItem.unit }})</span>
+        </div>
+        <div>
+          <span class="value">{{ infoItem.value }}</span>
+        </div>
       </div>
     </div>
   </div>
@@ -45,7 +51,7 @@ export default class GeneralInfo extends Vue {
   align-items: center;
 }
 .info-item {
-  background-color: #0e6de9;
+  background-color: #0e6de985;
   position: relative;
   width: calc(50% - 8px);
   height: auto;
@@ -54,7 +60,7 @@ export default class GeneralInfo extends Vue {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  .icon{
+  .icon {
     color: #15e8f3;
     font-size: 18px;
     padding-right: 4px;
@@ -72,7 +78,10 @@ export default class GeneralInfo extends Vue {
     top: 0;
     bottom: 0;
     width: 2px;
-    background-color: #00eeff;
+    background-color: #0e6de9;
   }
+}
+.item-container{
+  padding:8px 12px;
 }
 </style>

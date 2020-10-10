@@ -1,43 +1,44 @@
 <template>
   <div class="home full-bg">
     <Header></Header>
-    <div class="home-body">
-      <div class="section-col">
-        <SectionContainer
-          class="section-item general-info-container"
-          :section-info="{title:'综合信息',position:'left'}"
-        >
-          <GeneralInfo class="general-info" v-if="generalList" :info-item-list="generalList"></GeneralInfo>
-        </SectionContainer>
-        <SectionContainer class="section-item" :section-info="{title:'健康评价',position:'left'}">
-          <Charts :options="healthEvaltionData" class="charts"></Charts>
-        </SectionContainer>
-      </div>
-      <SectionContainer class="section-col" :section-info="{title:'地图',position:'center'}">
-        <operating-days class="operating-days" v-bind:operated-days="operatedDays"></operating-days>
+    <div class="home-body d-flex align-items-stretch">
+      <SectionContainer
+        class="section-col position-relative"
+        :section-info="{ title: '地图', position: 'center' }"
+      >
+        <operating-days
+          class="operating-days"
+          v-bind:operated-days="operatedDays"
+        ></operating-days>
         <area-map></area-map>
       </SectionContainer>
-      <div class="section-col">
-        <SectionContainer class :section-info="{title:'应用领域',position:'left'}">
-          <application-fields @selected-field="selectFieldListener" :field-list="applicationFields"></application-fields>
+      <div class="col-3 d-flex flex-column ">
+        <SectionContainer
+          class="section-item general-info-container"
+          :section-info="{ title: '综合信息', position: 'left' }"
+        >
+          <GeneralInfo
+            class="general-info"
+            v-if="generalList"
+            :info-item-list="generalList"
+          ></GeneralInfo>
         </SectionContainer>
         <SectionContainer
-          class="section-item sec-bottom"
-          :section-info="{title:'系统运行',position:'left'}"
+            class="section-item application-area"
+          :section-info="{ title: '应用领域', position: 'left' }"
         >
-          <div class="operating-status">
-            <swiper-container>
-              <photovoltaic-info class="swiper-slide" :photovoltaic-info-list="photovoltaicInfo"></photovoltaic-info>
-              <charging-pile class="swiper-slide" :charging-pile-list="chargingPileList"></charging-pile>
-            </swiper-container>
-          </div>
+          <application-fields
+          class="flex-grow-1"
+            @selected-field="selectFieldListener"
+            :field-list="applicationFields"
+          ></application-fields>
         </SectionContainer>
       </div>
     </div>
     <dialog-container
       v-if="isShowDialog"
       :dialogTitle="selectAppList.name"
-      @close-dialog="isShowDialog=false"
+      @close-dialog="isShowDialog = false"
     >
       <application-list :app-list="selectAppList.list"></application-list>
     </dialog-container>
@@ -224,6 +225,10 @@ export default class Home extends Vue {
 }
 </script>
 <style lang="less" scoped>
+.col-3 {
+  width: 33.33%;
+  margin-left:1rem
+}
 .home {
   position: relative;
   width: 100%;
@@ -237,7 +242,7 @@ export default class Home extends Vue {
   flex-grow: 1;
   display: flex;
   flex-direction: row;
-  padding: 8px 16px;
+  padding:  32px;
 }
 .section-col {
   display: flex;
@@ -246,7 +251,6 @@ export default class Home extends Vue {
 
   width: 0;
   flex-grow: 1;
-  margin: 4px;
 }
 .section-item,
 .charts {
@@ -258,11 +262,11 @@ export default class Home extends Vue {
 }
 .section-item + .section-item,
 .sec-bottom {
-  margin-top: 8px;
+  margin-top: 48px;
 }
 .general-info {
   flex-grow: 1;
-  padding: 10px 12px;
+  padding: 5% 6%;
 }
 .operating-status {
   flex-grow: 1;
@@ -272,6 +276,10 @@ export default class Home extends Vue {
   justify-content: space-around;
 }
 .operating-days {
-  margin-top: 10%;
+  position:absolute;
+  top:15%;
+  left: 0;
+  right: 0;
+  margin:0 auto;
 }
 </style>

@@ -33,5 +33,6 @@ export default class ApplicationFields extends Vue {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
+  align-items: center;
 }
 </style>

@@ -37,7 +37,7 @@ export default class SectionItem extends Vue {
 .section-title {
   text-align: left;
   margin: 8px;
-  padding: 4px 8px;
+  padding: 12px 10px;
   background: linear-gradient(to right, #0825b7, #01b4ff00);
 }
 .title-center {
