@@ -1,4 +1,4 @@
-# operation-platform
+# cloud-platform
 
 ## Project setup
 ```
