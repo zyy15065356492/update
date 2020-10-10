@@ -51,7 +51,7 @@ export default class Header extends Vue {
 }
 .right-spanner {
   position: absolute;
-  left: 70%;
+  left: 75%;
   right: 0;
   bottom: 0;
   top: 20px;
@@ -60,13 +60,11 @@ export default class Header extends Vue {
   position: absolute;
   background-image: url(../../assets/images/left-spanner-bg.png);
   left: 0%;
-  right: 70%;
+  right: 75%;
   bottom: 0;
   top: 20px;
-   padding: 0 2rem 0 0;
+   padding: 0 0 0 3rem;
   display: flex;
-  justify-content: space-around;
   align-items: center;
-  padding-right:left ;
 }
 </style>

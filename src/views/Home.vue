@@ -4,7 +4,7 @@
     <div class="home-body d-flex align-items-stretch">
       <SectionContainer
         class="section-col position-relative"
-        :section-info="{ title: '地图', position: 'center' }"
+        :section-info="{ title: '项目分布', position: 'center' }"
       >
         <operating-days
           class="operating-days"
@@ -102,11 +102,9 @@ export default class Home extends Vue {
   constructor() {
     super();
     this.generalList = generalList;
-    console.log("generalList", generalList);
     this.applicationFields = applicationFields;
   }
   get operatedDays(): InfoItem {
-    console.log("operatedDays", operatedDays);
     return operatedDays;
   }
   get photovoltaicInfo(): Array<InfoItem> {
@@ -226,7 +224,7 @@ export default class Home extends Vue {
 </script>
 <style lang="less" scoped>
 .col-3 {
-  width: 33.33%;
+  width: 30.00%;
   margin-left:1rem
 }
 .home {

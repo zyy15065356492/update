@@ -15,9 +15,11 @@ export default class SectionTitle extends Vue {
 .section-title {
   color: white;
   width: 80px;
-  height: 40px;
+  height: 44px;
   background-image: url(../../assets/images/title-bg.png);
   text-align: center;
-  line-height: 40px;
+  line-height: 44px;
+  font-size: 18px;
+  padding:0 24px;
 }
 </style>

@@ -28,7 +28,7 @@ export default class ApplicationFieldItem extends Vue {
 <style lang="less" scoped>
 .application-field-item {
   width: 30%;
-  height: 80px;
+  height: 20%;
   background-image: url(../../assets/images/application-field-item-bg.png);
   display: flex;
   justify-content: center;
@@ -36,7 +36,7 @@ export default class ApplicationFieldItem extends Vue {
   margin: 4px 0;
 }
 .icon {
-  font-size: 30px;
+  font-size: 36px;
 }
 .content {
   display: flex;
@@ -53,12 +53,12 @@ export default class ApplicationFieldItem extends Vue {
 }
 .name {
   color: white;
-  font-size: 14px;
+  font-size: 16px;
 }
 .value {
-  font-size: 20px;
+  font-size: 27px;
 }
 .unit {
-  font-size: 14px;
+  font-size: 22px;
 }
 </style>

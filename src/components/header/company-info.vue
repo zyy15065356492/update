@@ -1,7 +1,7 @@
 <template>
-  <div class="company-info  linear-words">
+  <div class="company-info  linear-words d-flex ">
     <img class="logo" src="../../assets/images/logo.png" />
-    {{ companyName }}
+    <div class="company-name">{{ companyName }}</div>
   </div>
 </template>
 <script lang="ts">
@@ -16,7 +16,11 @@ export default class CompanyInfo extends Vue {
 </script>
 <style lang="less" scoped>
 .logo{
-    height: 12px;
+    width:57px;
+    height: 22px;
     vertical-align: center;
+}
+.company-name{
+    padding-left: 20px;
 }
 </style>

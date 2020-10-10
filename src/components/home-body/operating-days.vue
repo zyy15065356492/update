@@ -38,19 +38,21 @@ export default class OperatingDays extends Vue {
   align-items: flex-end;
 }
 .days-words {
-  font-size: 18px;
+  font-size: 22px;
 }
 .day-item {
-  width: 30px;
-  height: 40px;
+  width: 35px;
+  height: 50px;
   font-family: "digiface";
-  background-color: darkblue;
+  background-color: #003888;
   margin: 0 4px;
-  font-size: 30px;
-  border: solid 1px #4fc3f7;
-  border-radius: 4px;
+  font-size: 42px;
+  border: solid 1px #5495FF;
+  font-weight: bold;
+  border-radius: 5px;
 }
 .days-unit {
   color: white;
+  font-size: 25px;
 }
 </style>
