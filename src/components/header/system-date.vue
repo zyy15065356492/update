@@ -11,6 +11,13 @@ import { Component, Vue } from "vue-property-decorator";
 @Component
 export default class SystemDate extends Vue {
   private date: moment.Moment = moment();
+  mounted() {
+    this.getRealTimeMonment();
+  }
+  getRealTimeMonment(){
+    this.date=moment();
+    setTimeout(this.getRealTimeMonment,1000);
+  }
 }
 </script>
 <style lang="less" scoped>
