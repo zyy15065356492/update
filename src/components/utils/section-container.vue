@@ -1,12 +1,12 @@
 <template>
-  <div class="section-bg full-bg">
+  <div class="section-bg full-bg"  v-bind:class="[sectionInfo.position == 'center' ? 'large-section' : 'normal-section']">
     <div
       class="section-title text-white"
       v-bind:class="[sectionInfo.position == 'center' ? 'title-center' : '']"
     >
       {{ sectionInfo.title }}
     </div>
-    <slot class="section-body"></slot>
+    <slot class="section-body" ></slot>
   </div>
 </template>
 <script lang="ts">
@@ -30,10 +30,16 @@ export default class SectionItem extends Vue {
 <style lang="less" scoped>
 .section-bg {
   border: 2px solid transparent;
-  border-image: url(../../assets/images/section-bg.png) 2;
+
   display: flex;
   flex-direction: column;
   justify-content: stretch;
+}
+.normal-section{
+  border-image: url(../../assets/images/section-bg.png) 2;
+}
+.large-section{
+  border-image: url(../../assets/images/large-section-bg.png) 2;
 }
 .section-body {
   flex-shrink: 1;
