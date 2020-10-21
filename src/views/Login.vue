@@ -1,9 +1,8 @@
 <template>
-  <div class="login full-bg d-flex flex-column justify-content-around align-items-center">
+  <div class="login full-bg d-flex flex-column justify-content-center align-items-center">
       <login-title class="login-title"></login-title>
-      <div class="flex-grow-1 d-flex flex-column justify-content-center align-items-center">
-             <login-panel></login-panel>
-      </div>
+     
+             <login-panel class="login-panel"></login-panel>
    
   </div>
 </template>
@@ -28,7 +27,11 @@ export default class Login extends Vue {
     background-image: url(../assets/images/login/login-bg.png);
 }
 .login-title{
-    margin-top:6rem;
+    margin-top: -6rem;
+    margin-bottom:6rem;
+}
+.login-panel{
+    margin-top: 6rem;
 }
 .m-auto{
     margin: auto;

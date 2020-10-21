@@ -5,8 +5,10 @@
       v-for="(infoItem, index) in infoItemList"
       :key="'item-info-' + index"
     >
-      <div class="item-container d-flex justify-content-start align-items-center flex-grow-1">
-        <div>
+      <div
+        class="item-container d-flex justify-content-start align-items-end flex-grow-1"
+      >
+        <div class="d-flex align-items-center">
           <span
             v-if="infoItem.icon"
             class="icon iconfont"
@@ -14,8 +16,8 @@
           ></span>
           <span class="title">{{ infoItem.name }}({{ infoItem.unit }})：</span>
         </div>
- 
-          <span class="value">{{ infoItem.value }}</span>
+
+        <div class="value">{{ infoItem.value }}</div>
       </div>
     </div>
   </div>
@@ -62,7 +64,7 @@ export default class GeneralInfo extends Vue {
   align-items: center;
   .icon {
     color: #15e8f3;
-    font-size: 18px;
+    font-size: 1.7rem;
     padding-right: 4px;
   }
   .title {
@@ -71,7 +73,7 @@ export default class GeneralInfo extends Vue {
   }
   .value {
     color: #ffdc1c;
-    line-height:0;
+    line-height: 1.6rem;
   }
   &:nth-child(even)::before {
     content: " ";
@@ -86,12 +88,12 @@ export default class GeneralInfo extends Vue {
     border-top-right-radius: 4px;
     border-bottom-right-radius: 4px;
   }
-   &:nth-child(odd) {
+  &:nth-child(odd) {
     border-top-left-radius: 4px;
     border-bottom-left-radius: 4px;
   }
 }
 .item-container {
-  padding: 8px 12px;
+  padding: 0.4rem 0.8rem;
 }
 </style>

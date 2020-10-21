@@ -12,8 +12,8 @@ export default class SystemTitle extends Vue {
 <style lang="less" scoped>
 .system-title{
   background:linear-gradient(to right,#0072FF,#00EAFF,#01A9FF);
-  font-size: 43.74px;
-  line-height: 80px;
+  font-size: 3.75rem;
+  line-height: 5.0rem;
   color:transparent;
   background-clip: text;
   -webkit-background-clip: text;

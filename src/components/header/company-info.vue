@@ -1,5 +1,5 @@
 <template>
-  <div class="company-info  linear-words d-flex ">
+  <div class="company-info  linear-words d-flex align-items-center">
     <img class="logo" src="../../assets/images/logo.png" />
     <div class="company-name">{{ companyName }}</div>
   </div>
@@ -22,5 +22,6 @@ export default class CompanyInfo extends Vue {
 }
 .company-name{
     padding-left: 20px;
+    font-size: 1.2rem;
 }
 </style>
