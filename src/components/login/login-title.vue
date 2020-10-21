@@ -1,6 +1,6 @@
 <template>
     <div class="login-title d-flex align-items-center justify-content-center">
-        <div class="system-logo"><img src="../../assets/images/login/logo.png"/></div>
+        <div class="system-logo"><img  class="img-fluid" src="../../assets/images/login/logo.png"/></div>
         <div class="system-title text-white">{{sysName}}</div>
     </div>
 </template>
@@ -17,12 +17,16 @@ export default class LoginTitle extends Vue{
 </script>
 <style lang="less" scoped>
 .system-title{
-    font-size: 84px;
-    line-height: 84px;
+    font-size: 5rem;
+    line-height: 5rem;
     margin-left: 2rem;
 }
 .system-logo{
-    width: 173px;
-    height: 73px;
+    width: 10rem;
+    height: 4.5rem;
+}
+.img-fluid{
+    height: 100%;
+    width: auto;
 }
 </style>

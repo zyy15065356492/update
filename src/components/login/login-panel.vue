@@ -1,7 +1,7 @@
 <template>
   <div
     class="login-panel full-bg d-flex align-items-center aligin-items-cemter"
-  >
+  > 
     <form class="login-form m-auto">
       <div class="input-container container-border">
         <i class="iconfont icon-yonghu1 icon"></i>
@@ -40,8 +40,8 @@ export default class LoginPanel extends Vue {
 </script>
 <style lang="less" scoped>
 .login-panel {
-  width: 40rem;
-  height: 30rem;
+  width: 45rem;
+  height: 35rem;
   background-image: url(../../assets/images/login/login-panel-border.png);
 }
 .input-container {
@@ -88,13 +88,13 @@ export default class LoginPanel extends Vue {
   opacity: 1;
 }
 .login-form {
-  padding: 4rem 6rem;
+  padding: 4rem;
   background-color: white;
 }
 .input-border {
   border: solid 1px lightblue;
 }
 .verify-code-image {
-  margin-left: 80px;
+  margin-left: 5rem;
 }
 </style>
