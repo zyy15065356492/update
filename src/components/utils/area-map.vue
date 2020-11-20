@@ -235,7 +235,6 @@ export default class AreaMap extends Vue {
     ]);
   }
   getLightData() {
-    console.log("light", light);
     return light.map((serieData: Array<number>) => {
       let px: number = serieData[0] / 1000;
       let py = serieData[1] / 1000;
