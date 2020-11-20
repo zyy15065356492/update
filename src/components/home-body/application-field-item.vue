@@ -3,13 +3,20 @@
     class="application-field-item full-bg cursor-pointer"
     v-on:click.stop="fieldItemClickListener(appFieldItemInfo)"
   >
-    <div class="icon iconfont" :class="appFieldItemInfo.icon"></div>
+    <div
+      class="icon-container d-flex align-items-center justify-content-center"
+      v-bind:style="{
+        background: `linear-gradient(${appFieldItemInfo.colors[0]}, ${appFieldItemInfo.colors[1]})`,
+      }"
+    >
+      <span class="icon iconfont" :class="appFieldItemInfo.icon"></span>
+    </div>
     <div class="content">
+      <div class="name">{{ appFieldItemInfo.name }}</div>
       <div class="value-content">
-        <span class="value">{{appFieldItemInfo.value}}</span>
-        <span class="unit">{{appFieldItemInfo.unit}}</span>
+        <span class="value">{{ appFieldItemInfo.value }}</span>
+        <span class="unit">{{ appFieldItemInfo.unit }}</span>
       </div>
-      <div class="name">{{appFieldItemInfo.name}}</div>
     </div>
   </div>
 </template>
@@ -21,22 +28,24 @@ export default class ApplicationFieldItem extends Vue {
   @Prop() private appFieldItemInfo!: InfoItem;
   @Emit("selected-field")
   fieldItemClickListener(appFieldItemInfo: InfoItem) {
-    console.log("infoItem",appFieldItemInfo);
+    console.log("infoItem", appFieldItemInfo);
   }
 }
 </script>
 <style lang="less" scoped>
 .application-field-item {
   width: 30%;
-  height: 20%;
-  background-image: url(../../assets/images/application-field-item-bg.png);
   display: flex;
   justify-content: center;
   align-items: center;
   margin: 4px 0;
+
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.08);
+  border-radius: 4px 4px 4px 4px;
 }
 .icon {
   font-size: 36px;
+  color: white;
 }
 .content {
   display: flex;
@@ -46,13 +55,10 @@ export default class ApplicationFieldItem extends Vue {
   align-items: center;
 }
 .value-content {
-  color: #4babfd;
-}
-.icon {
-  color: #0dcdff;
+  color: #FEA034;
 }
 .name {
-  color: white;
+  color: #232323;
   font-size: 16px;
 }
 .value {
@@ -60,5 +66,9 @@ export default class ApplicationFieldItem extends Vue {
 }
 .unit {
   font-size: 22px;
+}
+.icon-container {
+  height: 5rem;
+  width: 5rem;
 }
 </style>

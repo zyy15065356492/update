@@ -1,21 +1,20 @@
 <template>
   <div class="home full-bg">
-    <Header></Header>
     <div class="home-body d-flex align-items-stretch">
       <SectionContainer
         class="section-col position-relative"
-        :section-info="{ title: '项目分布', position: 'center' }"
+        :section-info="{
+          title: '项目分布',
+          position: 'left',
+          icon: applicationFieldsIcon,
+        }"
       >
-        <operating-days
-          class="operating-days"
-          v-bind:operated-days="operatedDays"
-        ></operating-days>
         <area-map></area-map>
       </SectionContainer>
-      <div class="col-3 d-flex flex-column ">
+      <div class="col-3 d-flex flex-column">
         <SectionContainer
           class="section-item general-info-container"
-          :section-info="{ title: '综合信息', position: 'left' }"
+          :section-info="{ title: '综合信息', position: 'left', icon: projectsDistributionIcon }"
         >
           <GeneralInfo
             class="general-info"
@@ -24,11 +23,11 @@
           ></GeneralInfo>
         </SectionContainer>
         <SectionContainer
-            class="section-item application-area"
-          :section-info="{ title: '应用领域', position: 'left' }"
+          class="section-item application-area"
+          :section-info="{ title: '应用领域', position: 'left', icon: summarizeIcon }"
         >
           <application-fields
-          class="flex-grow-1"
+            class="flex-grow-1"
             @selected-field="selectFieldListener"
             :field-list="applicationFields"
           ></application-fields>
@@ -69,6 +68,9 @@ import OperatingDays from "@/components/home-body/operating-days.vue";
 import DialogContainer from "@/components/utils/dialog-container.vue";
 import ApplicationList from "@/components/home-body/dialogs/application-list.vue";
 import SwiperContainer from "@/components/utils/swiper-container.vue";
+import * as applicationFieldsIcon from "@/assets/images/home/application-fields.png";
+import * as projectsDistributionIcon from "@/assets/images/home/projects-distribution.png";
+import * as summarizeIcon from "@/assets/images/home/summarize.png";
 @Component({
   components: {
     AreaMap,
@@ -88,6 +90,9 @@ import SwiperContainer from "@/components/utils/swiper-container.vue";
 export default class Home extends Vue {
   public generalList: Array<InfoItem>;
   private applicationFields: Array<InfoItem>;
+  applicationFieldsIcon = applicationFieldsIcon;
+  projectsDistributionIcon = projectsDistributionIcon;
+  summarizeIcon = summarizeIcon;
   private selectAppList:
     | {
         name: string;
@@ -224,14 +229,13 @@ export default class Home extends Vue {
 </script>
 <style lang="less" scoped>
 .col-3 {
-  width: 30.00%;
-  margin-left:1rem
+  width: 30%;
+  margin-left: 1rem;
 }
 .home {
   position: relative;
   width: 100%;
   height: 100%;
-  background-image: url(../assets/images/home-bg.png);
   display: flex;
   flex-direction: column;
 }
@@ -240,7 +244,7 @@ export default class Home extends Vue {
   flex-grow: 1;
   display: flex;
   flex-direction: row;
-  padding:  32px;
+  padding: 32px;
 }
 .section-col {
   display: flex;
@@ -274,10 +278,10 @@ export default class Home extends Vue {
   justify-content: space-around;
 }
 .operating-days {
-  position:absolute;
-  top:15%;
+  position: absolute;
+  top: 15%;
   left: 0;
   right: 0;
-  margin:0 auto;
+  margin: 0 auto;
 }
 </style>

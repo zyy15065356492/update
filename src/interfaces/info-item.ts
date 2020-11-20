@@ -3,4 +3,6 @@ export default interface InfoItem {
     name:string,
     value:number|string,
     unit?:string
+    bgImg?:any,
+    colors?:Array<String>
 }

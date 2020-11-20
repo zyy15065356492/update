@@ -1,23 +1,20 @@
 <template>
   <div class="general-info">
     <div
-      class="info-item half-width"
+      class="info-item half-width full-bg"
       v-for="(infoItem, index) in infoItemList"
       :key="'item-info-' + index"
+      :style="{ 'background-image': `url(${infoItem.bgImg})` }"
     >
       <div
-        class="item-container d-flex justify-content-start align-items-end flex-grow-1"
+        class="item-container d-flex flex-column align-items-center flex-grow-1"
       >
-        <div class="d-flex align-items-center">
-          <span
-            v-if="infoItem.icon"
-            class="icon iconfont"
-            :class="infoItem.icon"
-          ></span>
-          <span class="title">{{ infoItem.name }}({{ infoItem.unit }})：</span>
+        <div class="value">
+          {{ infoItem.value }}<span class="unit">{{ infoItem.unit }}</span>
         </div>
-
-        <div class="value">{{ infoItem.value }}</div>
+        <div class="d-flex align-items-center">
+          <span class="title">{{ infoItem.name }}</span>
+        </div>
       </div>
     </div>
   </div>
@@ -34,7 +31,6 @@ export default class GeneralInfo extends Vue {
 
   constructor() {
     super();
-    console.log("this.infoItemList", this.infoItemList);
   }
   mouted() {
     console.log("this.infoItemList", this.infoItemList);
@@ -52,16 +48,15 @@ export default class GeneralInfo extends Vue {
   align-items: center;
 }
 .info-item {
-  height: 40px;
-  background-color: #0e6de985;
+  height: 80px;
   position: relative;
-  width: calc(50% - 26.99px);
-  height: auto;
-  padding: 4px 4px 4px 22.99px;
+  width: calc(50% - 12.99px);
+  padding: 4px 4px 4px 5px;
   text-align: left;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  color: white;
   .icon {
     color: #15e8f3;
     font-size: 1.7rem;
@@ -72,17 +67,11 @@ export default class GeneralInfo extends Vue {
     margin-left: 11px;
   }
   .value {
-    color: #ffdc1c;
-    line-height: 1.6rem;
+    font-size: 1.8rem;
+    line-height:1;
   }
-  &:nth-child(even)::before {
-    content: " ";
-    position: absolute;
-    left: 0;
-    top: 0;
-    bottom: 0;
-    width: 2px;
-    background-color: #0e6de9;
+  .unit {
+    font-size: 1rem;
   }
   &:nth-child(even) {
     border-top-right-radius: 4px;
@@ -93,7 +82,8 @@ export default class GeneralInfo extends Vue {
     border-bottom-left-radius: 4px;
   }
 }
+
 .item-container {
-  padding: 0.4rem 0.8rem;
+  padding: 0.4rem 0.8rem 0.4rem 2rem;
 }
 </style>

@@ -1,44 +1,46 @@
 import InfoItem from "@/interfaces/info-item"
+import * as genBg1 from "@/assets/images/home/gen-bg-1.png";
+import * as genBg2 from "@/assets/images/home//gen-bg-2.png";
+import * as genBg3 from "@/assets/images/home//gen-bg-3.png";
+ import * as genBg4 from "@/assets/images/home//gen-bg-4.png"; 
+ import * as genBg5 from "@/assets/images/home//gen-bg-5.png";
+ import * as genBg6 from "@/assets/images/home//gen-bg-6.png";
 export const generalList: Array<InfoItem> = [{
     icon: "icon-biaoqiankuozhan_xiangmu-292",
     name: "项目",
     value: 158,
-    unit: "个"
+    unit: "个",
+    bgImg:genBg1
 }, {
     icon: "icon-shebei",
     name: "监测设备",
     value: 12523,
-    unit: "个"
+    unit: "个",
+    bgImg:genBg2
 }, {
     icon: "icon-zhuangjirongliang",
     name: "总容量",
     value: '1560k',
-    unit: "kVA"
+    unit: "kVA",
+    bgImg:genBg3
 }, {
     icon: "icon-peidianshi",
     name: "配电室",
     value: 847,
-    unit: '个'
+    unit: '个',
+    bgImg:genBg4
 }, {
     icon: "icon-bianyaqi",
     name: "台区",
     value: 945,
-    unit: "个"
+    unit: "个",
+    bgImg:genBg5
 }, {
     icon: "icon-yonghu",
     name: "服务用户",
     value: 15451,
-    unit: "户"
-}, {
-    icon: "icon-renci",
-    name: "派单",
-    value: 158,
-    unit: "人次"
-}, {
-    icon: "icon-yujing",
-    name: "预警",
-    value: 160,
-    unit: "条"
+    unit: "户",
+    bgImg:genBg6
 }]
 export const healthEvaluationList: Array<InfoItem> = [
     {
@@ -79,47 +81,56 @@ export const applicationFields: Array<InfoItem> = [
         icon: "icon-peidianshi",
         name: "智慧配电室",
         value: 25,
-        unit: "个"
+        unit: "个",
+        colors:["#00ECCF","#00C8F1"]
     }, {
         icon: "icon-xiaoqu-xianxing",
         name: "小区能效",
         value: 15,
-        unit: "个"
+        unit: "个",
+        colors:["#E6B3FF","#9A57FF"]
     }, {
         icon: "icon-zhihuiyuanqu",
         name: "综合体能效",
         value: 102,
-        unit: "个"
+        unit: "个",
+        colors:["#FE8E25","#FFD461"]
     }, {
         icon: 'icon-xuexiao1',
         name: "智慧校园",
         value: 10,
-        unit: "个"
+        unit: "个",
+        colors:["#00D2FF","#3A7BD5"]
     }, {
         icon: "icon-gongye",
         name: "工业企业",
         value: 25,
-        unit: "个"
+        unit: "个",
+        colors:["#F5538A","#FF9B7B"]
     }, {
         icon: "icon-nongyejishu",
         name: "农业智慧能效",
         value: 12,
-        unit: "个"
+        unit: "个",
+        colors:["#B9BEC6","#B3AEAC"]
     }, {
         icon: "icon-liansuojiameng",
         name: "连锁商业",
         value: 25,
-        unit: "个"
+        unit: "个",
+        colors:["#00ECCF","#00C8F1"]
     }, {
         icon: "icon-3jiatingdizhi",
         name: "家庭能效",
         value: 25,
-        unit: "个"
+        unit: "个",
+        colors:["#E6B3FF","#9A57FF"]
     }, {
         icon: "icon-zhongyangkongdiao",
         name: "中央空调能效",
         value: 12,
-        unit: "个"
+        unit: "个",
+        colors:["#FE8E25","#FFD461"],
     }
 ];
 export const applicationList = [{
