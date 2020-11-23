@@ -59,13 +59,13 @@ export default class ApplicationFieldItem extends Vue {
 }
 .name {
   color: #232323;
-  font-size: 16px;
+  font-size: 1rem;
 }
 .value {
-  font-size: 27px;
+  font-size: 1.6rem;
 }
 .unit {
-  font-size: 22px;
+  font-size: 1.4rem;
 }
 .icon-container {
   height: 5rem;

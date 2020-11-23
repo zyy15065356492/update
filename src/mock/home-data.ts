@@ -1,10 +1,10 @@
 import InfoItem from "@/interfaces/info-item"
-import * as genBg1 from "@/assets/images/home/gen-bg-1.png";
-import * as genBg2 from "@/assets/images/home//gen-bg-2.png";
-import * as genBg3 from "@/assets/images/home//gen-bg-3.png";
- import * as genBg4 from "@/assets/images/home//gen-bg-4.png"; 
- import * as genBg5 from "@/assets/images/home//gen-bg-5.png";
- import * as genBg6 from "@/assets/images/home//gen-bg-6.png";
+import  genBg1 from "@/assets/images/home/gen-bg-1.png";
+import  genBg2 from "@/assets/images/home/gen-bg-2.png";
+import  genBg3 from "@/assets/images/home/gen-bg-3.png";
+import  genBg4 from "@/assets/images/home/gen-bg-4.png"; 
+import  genBg5 from "@/assets/images/home/gen-bg-5.png";
+import  genBg6 from "@/assets/images/home/gen-bg-6.png";
 export const generalList: Array<InfoItem> = [{
     icon: "icon-biaoqiankuozhan_xiangmu-292",
     name: "项目",

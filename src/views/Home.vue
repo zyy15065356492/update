@@ -11,9 +11,9 @@
       >
         <area-map></area-map>
       </SectionContainer>
-      <div class="col-3 d-flex flex-column">
+      <div class="home-right-container d-flex flex-column">
         <SectionContainer
-          class="section-item general-info-container"
+          class="none-height flex-grow-1 section-item general-info-container"
           :section-info="{ title: '综合信息', position: 'left', icon: projectsDistributionIcon }"
         >
           <GeneralInfo
@@ -23,7 +23,7 @@
           ></GeneralInfo>
         </SectionContainer>
         <SectionContainer
-          class="section-item application-area"
+          class="none-height flex-grow-1 section-item application-area"
           :section-info="{ title: '应用领域', position: 'left', icon: summarizeIcon }"
         >
           <application-fields
@@ -68,9 +68,9 @@ import OperatingDays from "@/components/home-body/operating-days.vue";
 import DialogContainer from "@/components/utils/dialog-container.vue";
 import ApplicationList from "@/components/home-body/dialogs/application-list.vue";
 import SwiperContainer from "@/components/utils/swiper-container.vue";
-import * as applicationFieldsIcon from "@/assets/images/home/application-fields.png";
-import * as projectsDistributionIcon from "@/assets/images/home/projects-distribution.png";
-import * as summarizeIcon from "@/assets/images/home/summarize.png";
+import  applicationFieldsIcon from "@/assets/images/home/application-fields.png";
+import  projectsDistributionIcon from "@/assets/images/home/projects-distribution.png";
+import  summarizeIcon from "@/assets/images/home/summarize.png";
 @Component({
   components: {
     AreaMap,
@@ -228,8 +228,8 @@ export default class Home extends Vue {
 }
 </script>
 <style lang="less" scoped>
-.col-3 {
-  width: 30%;
+.home-right-container {
+  width: 36%;
   margin-left: 1rem;
 }
 .home {
@@ -264,7 +264,7 @@ export default class Home extends Vue {
 }
 .section-item + .section-item,
 .sec-bottom {
-  margin-top: 48px;
+  margin-top: 1.6rem;
 }
 .general-info {
   flex-grow: 1;
