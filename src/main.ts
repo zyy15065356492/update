@@ -6,8 +6,12 @@ import echarts from 'echarts';
 import "@/assets/styles/index.less";
 import "@/assets/fonts/iconfont/iconfont.css"
 import 'swiper/swiper.less';
-Vue.prototype.$echarts = echarts;
+import ElementUI from 'element-ui';
+import 'element-ui/lib/theme-chalk/index.css';
+import './peidianshi/rem'
 
+Vue.prototype.$echarts = echarts;
+Vue.use(ElementUI);
 Vue.config.productionTip = false
 
 new Vue({
